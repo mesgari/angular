@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+</head>
+<body ng-controller="mainController">
+
+
+<div class="wrapper">
+    <div class="alert alert-info" ng-repeat="item in items | orderBy : 'like' : true">
+        <items-Repeat info="item"></items-Repeat>
+    </div>
+</div>
+
+
+<script src="js/angular.min.js"></script>
+<script src="app.js"></script>
+<script src="js/mainController.js"></script>
+<script src="js/main.directive.js"></script>
+
+</body>
+</html>
