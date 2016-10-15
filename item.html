@@ -1,10 +1,13 @@
-<p>{{info.text}}</p>
-<hr>
-<div class="action">
-    <span>{{info.like}}</span>
+<ul>
+    <li ng-repeat="item in items | orderBy: '-like'" class="clearfix" style="border-bottom: 1px solid #aaa; padding: 15px">
+        <p>{{item.text}}</p>
+        <div class="action">
+            <span>{{item.like}}</span>
 
-    <div class="pull-right">
-        <button ng-click="plus()">Like</button>
-        <button ng-click="minez()">Dislike</button>
-    </div>
-</div>
+            <div class="pull-right">
+                <button ng-click="item.like = item.like + 1">Like</button>
+                <button ng-click="item.like = item.like - 1">Dislike</button>
+            </div>
+        </div>
+    </li>
+</ul>
